@@ -11,6 +11,7 @@ html, body {
 
 :root {
   --bg-primary-color: #111;
+  --bg-fill-color: #fdfdfc;
   --text-primary-color: #eee;
   --space-xs: .4vw;
   --space-sm: .8vw;
@@ -59,11 +60,12 @@ main section .board {
   border: 1px solid var(--border-primary-color);
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
 }
 main section .board .block {
-  height: 30px;
-  width: 30px;
   border: 1px solid var(--border-primary-color);
+}
+main section .board .fill {
+  background-color: var(--bg-fill-color);
 }/*# sourceMappingURL=style.css.map */

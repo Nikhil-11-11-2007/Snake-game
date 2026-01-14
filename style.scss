@@ -12,6 +12,7 @@ html,body{
 :root{
     // background colors
     --bg-primary-color: #111;
+    --bg-fill-color: #fdfdfc;
 
     // text colors
     --text-primary-color: #eee;
@@ -73,13 +74,15 @@ main{
             border: 1px solid var(--border-primary-color);
             flex-grow: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-            grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
 
             .block{
-                height: 30px;
-                width: 30px;
                 border: 1px solid var(--border-primary-color);
+            }
+
+            .fill{
+                background-color: var(--bg-fill-color);
             }
         }   
     }
