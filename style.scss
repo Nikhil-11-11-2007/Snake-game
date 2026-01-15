@@ -13,6 +13,7 @@ html,body{
     // background colors
     --bg-primary-color: #111;
     --bg-fill-color: #fdfdfc;
+    --bg-food-color: rgba(215, 6, 6, 0.945);
 
     // text colors
     --text-primary-color: #eee;
@@ -38,10 +39,11 @@ html,body{
     --border-radius-3xl: 2.4vw;
 }
 
-@mixin flex-center{
+@mixin flex-center($gap: 0) {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: $gap;
 }
 
 html{
@@ -74,8 +76,8 @@ main{
             border: 1px solid var(--border-primary-color);
             flex-grow: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-            grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
 
             .block{
                 border: 1px solid var(--border-primary-color);
@@ -84,6 +86,42 @@ main{
             .fill{
                 background-color: var(--bg-fill-color);
             }
+
+            .food{
+                background-color: var(--bg-food-color);
+            }
         }   
+    }
+
+    .modal{
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        background-color: rgba(78, 75, 75, 0.2);
+        backdrop-filter: blur(4px);
+        @include flex-center();
+        text-align: center;
+
+        .start-game,.game-over{
+            @include flex-center(var(--space-md));
+            flex-direction: column;
+        }
+
+        .game-over{
+            display: none;
+        }
+
+        .btn{
+            padding: var(--space-sm) var(--space-md);
+            border: none;
+            border-radius: var(--border-radius-lg);
+            cursor: pointer;
+            transition: all ease .3s;
+        }
+
+        .btn:active{
+            scale: 1.1;
+        }
     }
 }

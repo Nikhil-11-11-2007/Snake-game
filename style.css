@@ -12,6 +12,7 @@ html, body {
 :root {
   --bg-primary-color: #111;
   --bg-fill-color: #fdfdfc;
+  --bg-food-color: rgba(215, 6, 6, 0.945);
   --text-primary-color: #eee;
   --space-xs: .4vw;
   --space-sm: .8vw;
@@ -60,12 +61,49 @@ main section .board {
   border: 1px solid var(--border-primary-color);
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
 }
 main section .board .block {
   border: 1px solid var(--border-primary-color);
 }
 main section .board .fill {
   background-color: var(--bg-fill-color);
+}
+main section .board .food {
+  background-color: var(--bg-food-color);
+}
+main .modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba(78, 75, 75, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+main .modal .start-game, main .modal .game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  flex-direction: column;
+}
+main .modal .game-over {
+  display: none;
+}
+main .modal .btn {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+main .modal .btn:active {
+  scale: 1.1;
 }/*# sourceMappingURL=style.css.map */
