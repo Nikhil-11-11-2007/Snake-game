@@ -10,9 +10,9 @@ html, body {
 }
 
 :root {
-  --bg-primary-color: #111;
-  --bg-fill-color: #fdfdfc;
-  --bg-food-color: rgba(215, 6, 6, 0.945);
+  --bg-primary-color: #492828;
+  --bg-fill-color: #ECECEC;
+  --bg-ground-color: #656D3F;
   --text-primary-color: #eee;
   --space-xs: .4vw;
   --space-sm: .8vw;
@@ -58,20 +58,21 @@ main section .infos .info {
   border-radius: var(--border-radius-md);
 }
 main section .board {
-  border: 1px solid var(--border-primary-color);
+  border-radius: 1vw;
+  background-color: var(--bg-ground-color);
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
 }
-main section .board .block {
-  border: 1px solid var(--border-primary-color);
-}
 main section .board .fill {
   background-color: var(--bg-fill-color);
+  border-radius: 0.6vw;
+  color: #111;
 }
 main section .board .food {
-  background-color: var(--bg-food-color);
+  background-color: var(--bg-primary-color);
+  border-radius: 50%;
 }
 main .modal {
   height: 100vh;

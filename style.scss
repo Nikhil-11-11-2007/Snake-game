@@ -11,9 +11,9 @@ html,body{
 
 :root{
     // background colors
-    --bg-primary-color: #111;
-    --bg-fill-color: #fdfdfc;
-    --bg-food-color: rgba(215, 6, 6, 0.945);
+    --bg-primary-color: #492828;
+    --bg-fill-color: #ECECEC;
+    --bg-ground-color: #656D3F;
 
     // text colors
     --text-primary-color: #eee;
@@ -73,22 +73,22 @@ main{
             }
         }
         .board{
-            border: 1px solid var(--border-primary-color);
+            border-radius: 1vw;
+            background-color: var(--bg-ground-color);
             flex-grow: 1;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
             grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
 
-            .block{
-                border: 1px solid var(--border-primary-color);
-            }
-
             .fill{
                 background-color: var(--bg-fill-color);
+                border-radius: .6vw;
+                color: #111;
             }
 
             .food{
-                background-color: var(--bg-food-color);
+                background-color: var(--bg-primary-color);
+                border-radius: 50%;
             }
         }   
     }
