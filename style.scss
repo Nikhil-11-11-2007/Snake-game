@@ -82,12 +82,14 @@ main{
 
             .fill{
                 background-color: var(--bg-fill-color);
-                border-radius: .6vw;
+                border-radius: 40%;
                 color: #111;
             }
 
             .food{
-                background-color: var(--bg-primary-color);
+                background-image: url(https://static.vecteezy.com/system/resources/previews/047/130/682/original/apple-fruit-cartoon-illustration-isolated-on-transparent-background-free-png.png);
+                background-size: cover;
+                object-position: center;
                 border-radius: 50%;
             }
         }   
