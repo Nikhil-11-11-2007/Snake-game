@@ -180,6 +180,3 @@ addEventListener("keydown", function (e) {
     }
 
 })
-
-
-// https://github.com/Nikhil-11-11-2007/Snake-game
