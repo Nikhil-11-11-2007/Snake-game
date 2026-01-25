@@ -104,10 +104,12 @@ main .modal .game-over {
 main .modal .btn {
   padding: var(--space-sm) var(--space-md);
   border: none;
+  font-weight: 600;
+  font-size: 1rem;
   border-radius: var(--border-radius-lg);
   cursor: pointer;
   transition: all ease 0.3s;
 }
 main .modal .btn:active {
-  scale: 1.1;
+  scale: 0.95;
 }/*# sourceMappingURL=style.css.map */

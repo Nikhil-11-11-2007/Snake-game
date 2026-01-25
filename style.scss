@@ -117,13 +117,15 @@ main{
         .btn{
             padding: var(--space-sm) var(--space-md);
             border: none;
+            font-weight: 600;
+            font-size: 1rem;
             border-radius: var(--border-radius-lg);
             cursor: pointer;
             transition: all ease .3s;
         }
 
         .btn:active{
-            scale: 1.1;
+            scale: .95;
         }
     }
 }
